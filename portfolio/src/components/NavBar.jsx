@@ -1,8 +1,17 @@
 import React from 'react'
+import styles from './NavBar.module.css';
 
 const NavBar = () => {
   return (
-    <div>NavBar</div>
+    <header className={styles.navbar}>
+            <nav>
+                <ul className={styles.navLista}>
+                    <li><a href="#about">Sobre Mim</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                </ul>
+            </nav>
+        </header>
   )
 }
 

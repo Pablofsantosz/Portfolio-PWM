@@ -14,7 +14,7 @@ export default function Hero() {
         className={styles.avatar}
       />
       <h1 className={styles.name}>Pablo Felipe dos Santos</h1>
-      <h2 className={styles.title}>Desenvolvedor de Software</h2>
+      <h2 className={styles.title}>Desenvolvedor de Software Web & QA </h2>
       <p className={styles.description}>
         Estudante de Ciência da Computação (5º período) na Universidade Católica de Pernambuco (UNICAP). Apaixonado por desenvolvimento de software e qualidade, busco sempre aprimorar minhas habilidades e contribuir para projetos significativos.
       </p>
@@ -22,9 +22,11 @@ export default function Hero() {
       <div className={styles.buttonContainer}>
         <Button text="Download CV">
           <FiDownload />
+          //Como colocar procurar !!!
         </Button>
         <Button text="Contato">
           <FiMail />
+          //Como colocar procurar !!!
         </Button>
       </div>
     </div>

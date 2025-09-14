@@ -3,6 +3,9 @@ import { FaPython, FaReact, FaNodeJs, FaJava, FaGitAlt } from 'react-icons/fa';
 import { SiJavascript, SiDjango } from 'react-icons/si';
 import { TbBrandCSharp } from 'react-icons/tb'; 
 //https://react-icons.github.io/react-icons/(site icones usados, react-icons)
+
+
+// Criei um array de objetos para guardar minhas skills, pra ficar mais db colocar e tirar skills
 const skills = [
   { name: 'Python', icon: <FaPython size={50} /> },
   { name: 'C#', icon: <TbBrandCSharp size={50} /> }, 

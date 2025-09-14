@@ -5,7 +5,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const projectData = [
   {
-    title: 'Projecto 1',
+    title: 'FastRx',
     description: 'descrição',
     image: '/projects/proj2.jpg', 
     repoLink: '#',
@@ -13,6 +13,10 @@ const projectData = [
     
   },
   {title: 'Projecto 1',
+    description: 'descrição',
+    image: '/projects/proj2.jpg', 
+    repoLink: '#',},
+    {title: 'Projecto 1',
     description: 'descrição',
     image: '/projects/proj2.jpg', 
     repoLink: '#',},

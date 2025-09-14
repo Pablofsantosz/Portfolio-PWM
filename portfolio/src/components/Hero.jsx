@@ -20,10 +20,14 @@ export default function Hero() {
       </p>
       <br />
       <div className={styles.buttonContainer}>
-        <Button text="Download CV">
-          <FiDownload />
-          //Como colocar procurar !!!
-        </Button>
+        {/* a SEM Download so abre o arquivo ent precisa disso */}
+       <a href="/documents/CV_Pablo_Felipe_Dos_Santos.pdf" download>
+          <Button text="Download CV">
+            <FiDownload />
+          </Button>
+        </a>
+          
+        
         <Button text="Contato">
           <FiMail />
           //Como colocar procurar !!!

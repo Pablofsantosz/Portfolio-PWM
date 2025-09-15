@@ -1,32 +1,37 @@
-'use client';
-import { useState } from 'react';
+'use client'; 
+import { useState, useEffect } from 'react'; 
 import Link from 'next/link';
+import Image from 'next/image'; 
 import styles from './JogoDaForca.module.css';
 
-// 1. Defino minha fonte de palavras.
-const palavras = ["REACT", "NEXTJS", "JAVASCRIPT", "PORTFOLIO", "COMPONENTE"];
 
-// 2. Crio uma função para me dar uma palavra aleatória.
-function escolherPalavraAleatoria() {
-  return palavras[Math.floor(Math.random() * palavras.length)];
-}
 
 export default function JogoDaForca() {
-  // 3. Uso useState para guardar a palavra que o jogador precisa adivinhar.
-  // A palavra inicial é escolhida assim que o componente é criado.
   const [palavraSecreta, setPalavraSecreta] = useState(escolherPalavraAleatoria());
-
-  // 4. Crio outro useState para guardar a lista de letras que o jogador já usou.
-  // Começa vazia.
   const [letrasTentadas, setLetrasTentadas] = useState([]);
+
+  // 2. Crio um novo estado para guardar o número de erros, começando em 0.
+  const [numeroDeErros, setNumeroDeErros] = useState(0);
 
   
   return (
     <div className={styles.gameContainer}>
       <Link href="/" className={styles.backLink}>← Voltar ao Portfólio</Link>
-      <h1>Jogo da Forca</h1>
-      <p>Palavra Secreta: {palavraSecreta}</p>
-      <p>Letras Tentadas: {letrasTentadas.join(', ')}</p>
+      
+      {/* (O status, a palavra e o teclado continuam aqui) */}
+      
+      {/* 3. Substituo o desenho do boneco pelo componente <Image> */}
+      <div className={styles.drawingContainer}>
+        <Image 
+          // O caminho da imagem é dinâmico. Ele muda conforme o `numeroDeErros` aumenta.
+          src={`/forca/forca-${numeroDeErros}.png`} 
+          alt={`Forca com ${numeroDeErros} erros`}
+          width={250}
+          height={300}
+        />
+      </div>
+
+      {/* ... (o resto do código JSX) ... */}
     </div>
   );
 }

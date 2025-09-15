@@ -1,21 +1,13 @@
 .gameContainer {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: 2rem auto;
   align-items: center;
-  color: white;
-  padding: 1rem;
-}
-
-.backLink {
-  align-self: flex-start;
-  color: #ccc;
-  text-decoration: none;
-  font-size: 1rem;
-}
-.backLink:hover {
+  gap: 20px;
+  padding: 20px;
   color: white;
 }
 
+.wordContainer {
+  font-size: 40px;
+  font-family: monospace;
+}

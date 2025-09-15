@@ -11,3 +11,8 @@
   font-size: 40px;
   font-family: monospace;
 }
+.letter {
+  width: 30px;
+  text-align: center;
+  border-bottom: 3px solid white;
+}

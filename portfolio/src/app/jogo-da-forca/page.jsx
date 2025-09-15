@@ -28,11 +28,17 @@ export default function JogoDaForca() {
   return (
     <div className={styles.gameContainer}>
       <Link href="/">← Voltar</Link>
-      <h1>Jogo da Forca</h1>
-      <p>Adivinhe a palavra:</p>
+        <h1>Jogo da Forca</h1>
+        <p>Adivinhe a palavra:</p>
       <div className={styles.wordContainer}>
-        {palavraSecreta}
+         {palavraSecreta}
+          {palavraSecreta.split('').map((letra, index) => (
+          <span key={index} className={styles.letter}>
+            _
+          </span>
+        ))}
       </div>
     </div>
+    
   );
 }

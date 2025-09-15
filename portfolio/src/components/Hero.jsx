@@ -33,10 +33,7 @@ export default function Hero() {
            <FiMail />
         </Button>
         </a>
-        
 
-        
-        
       </div>
       <Link href="/jogo-da-forca" passHref>
           <Button text="Jogar Forca">

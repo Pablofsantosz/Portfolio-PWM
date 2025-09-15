@@ -1,29 +1,43 @@
 'use client'; 
-import { useState, useEffect } from 'react'; 
+import { useState } from 'react'; 
 import Link from 'next/link';
-import Image from 'next/image'; 
+import Image from 'next/image'; // Importamos o componente de Imagem
 import styles from './JogoDaForca.module.css';
 
+const palavras = [
+    "cachorro", "gato", "sol", "lua", "estrela",
+    "carro", "floresta", "oceano", "fogo", "montanha",
+    "chuva", "vento", "cidade", "amor", "vida",
+    "tempo", "sonho", "livro", "café", "música",
+    "computador", "praia", "flor", "rio", "amizade",
+    "trabalho", "paz", "futuro", "história", "esperança",
+    "viagem", "jogo", "arte", "cor", "família",
+    "saúde", "sabedoria", "natureza", "cultura", "alegria"
+  ];
 
+function escolherPalavraAleatoria() {
+  return palavras[Math.floor(Math.random() * palavras.length)];
+}
 
 export default function JogoDaForca() {
   const [palavraSecreta, setPalavraSecreta] = useState(escolherPalavraAleatoria());
   const [letrasTentadas, setLetrasTentadas] = useState([]);
-
-  // 2. Crio um novo estado para guardar o número de erros, começando em 0.
+  
+  
   const [numeroDeErros, setNumeroDeErros] = useState(0);
+
 
   
   return (
     <div className={styles.gameContainer}>
       <Link href="/" className={styles.backLink}>← Voltar ao Portfólio</Link>
       
-      {/* (O status, a palavra e o teclado continuam aqui) */}
+      <h1>Jogo da Forca</h1>
       
-      {/* 3. Substituo o desenho do boneco pelo componente <Image> */}
+     
       <div className={styles.drawingContainer}>
         <Image 
-          // O caminho da imagem é dinâmico. Ele muda conforme o `numeroDeErros` aumenta.
+          
           src={`/forca/forca-${numeroDeErros}.png`} 
           alt={`Forca com ${numeroDeErros} erros`}
           width={250}
@@ -31,7 +45,13 @@ export default function JogoDaForca() {
         />
       </div>
 
-      {/* ... (o resto do código JSX) ... */}
+      
+      <div className={styles.wordContainer}>
+        
+      </div>
+      <div className={styles.keyboard}>
+        
+      </div>
     </div>
   );
 }

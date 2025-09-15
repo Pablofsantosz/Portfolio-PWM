@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { FiDownload, FiMail } from 'react-icons/fi'; 
 import Button from './Button';
 import styles from './Hero.module.css';
+import { FaGamepad } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -26,13 +28,21 @@ export default function Hero() {
             <FiDownload />
           </Button>
         </a>
-          
-        
+        <a href="mailto:pabloletiane@gmail.com">
         <Button text="Contato">
-          <FiMail />
-          //Como colocar procurar !!!
+           <FiMail />
         </Button>
+        </a>
+        
+
+        
+        
       </div>
+      <Link href="/jogo-da-forca" passHref>
+          <Button text="Jogar Forca">
+            <FaGamepad />
+          </Button>
+        </Link>
     </div>
   );
 }

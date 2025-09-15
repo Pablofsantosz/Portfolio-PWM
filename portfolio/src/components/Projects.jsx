@@ -8,18 +8,11 @@ const projectData = [
     title: 'FastRx',
     description: 'descrição',
     image: '/projects/proj2.jpg', 
-    repoLink: '#',
+    repoLink: '#'
     
     
-  },
-  {title: 'Projecto 1',
-    description: 'descrição',
-    image: '/projects/proj2.jpg', 
-    repoLink: '#',},
-    {title: 'Projecto 1',
-    description: 'descrição',
-    image: '/projects/proj2.jpg', 
-    repoLink: '#',},
+  }
+ 
 
 ];
 

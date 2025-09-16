@@ -23,20 +23,36 @@ function escolherPalavraAleatoria() {
 export default function JogoDaForca() {
   // 3. Uso a minha nova função para definir a palavra inicial do jogo.
   const [palavraSecreta, setPalavraSecreta] = useState(escolherPalavraAleatoria());
+  const [letrasTentadas, setLetrasTentadas] = useState([]);
 
- 
+
+  function handleTentativa(letra) {
+    //adiciona a letra clicada na nossa lista ja clicadas
+    setLetrasTentadas(letrasAtuais => [...letrasAtuais, letra]);
+  }
+  const teclado = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
+
   return (
     <div className={styles.gameContainer}>
       <Link href="/">← Voltar</Link>
-        <h1>Jogo da Forca</h1>
-        <p>Adivinhe a palavra:</p>
+      <h1>Jogo da Forca</h1>
+      <p>Adivinhe a palavra:</p>
       <div className={styles.wordContainer}>
-         {palavraSecreta}
-          {palavraSecreta.split('').map((letra, index) => (
-          <span key={index} className={styles.letter}>
+        {palavraSecreta.split('').map((letra, index) => (
+        <span key={index} className={styles.letter}>
             _
-          </span>
+        </span>
         ))}
+        <div className={styles.keyboard}>
+        {teclado.map(letra => (
+          <button 
+            key={letra} 
+            onClick={() => handleTentativa(letra)}
+          >
+            {letra}
+          </button>
+        ))}
+        </div>
       </div>
     </div>
     

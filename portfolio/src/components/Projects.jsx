@@ -11,6 +11,14 @@ const projectData = [
     repoLink: '#'
     
     
+  },
+  {
+    title: 'Spotify Clone',
+    description: 'descrição',
+    image: '/projects/proj2.jpg', 
+    repoLink: '#'
+    
+    
   }
  
 

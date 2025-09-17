@@ -70,8 +70,12 @@ export default function JogoDaForca() {
           </button>
         </div>
       ) : (
-        <div className={styles.keyboard}>
-          {teclado.map(letra => (
+        <div>
+          <div className={styles.guessedLettersContainer}>
+            <p>Letras Tentadas: {letrasTentadas.join(', ')}</p>
+          </div>
+          <div className={styles.keyboard}>
+            {teclado.map(letra => (
               <button 
                 key={letra} 
                 onClick={() => handleTentativa(letra)}
@@ -80,6 +84,7 @@ export default function JogoDaForca() {
                 {letra}
               </button>
           ))}
+          </div>
         </div>
       )}
     </div>

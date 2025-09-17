@@ -4,7 +4,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './JogoDaForca.module.css';
 
-const palavras = ["REACT", "NEXTJS", "JAVASCRIPT", "PORTFOLIO", "COMPONENTE"];
+const palavras = [
+    "cachorro", "gato", "sol", "lua", "estrela",
+    "carro", "floresta", "oceano", "fogo", "montanha",
+    "chuva", "vento", "cidade", "amor", "vida",
+    "tempo", "sonho", "livro", "café", "música",
+    "computador", "praia", "flor", "rio", "amizade",
+    "trabalho", "paz", "futuro", "história", "esperança",
+    "viagem", "jogo", "arte", "cor", "família",
+    "saúde", "sabedoria", "natureza", "cultura", "alegria"
+  ];
 
 function escolherPalavraAleatoria() {
   return palavras[Math.floor(Math.random() * palavras.length)];

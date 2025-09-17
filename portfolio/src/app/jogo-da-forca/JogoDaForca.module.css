@@ -6,8 +6,9 @@
   padding: 20px;
   color: white;
 }
-
 .wordContainer {
+  display: flex;
+  gap: 10px;
   font-size: 40px;
   font-family: monospace;
 }
@@ -15,6 +16,34 @@
   width: 30px;
   text-align: center;
   border-bottom: 3px solid white;
+  min-height: 50px; 
 }
-.keyboard { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 600px; }
-.keyboard button { width: 40px; height: 40px; font-size: 20px; cursor: pointer; }
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+}
+.keyboard button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.keyboard button:disabled {
+  opacity: 0.5;
+}
+.restartButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  min-height: 30px;
+}
+.restartContainer {
+  text-align: center;
+}
